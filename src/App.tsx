@@ -6,7 +6,7 @@ import OrderTotals from "./components/OrderTotals";
 import TipPrecentageForm from "./components/TipPrecentageForm";
 
 function App() {
-  const { order, addItem, removeItem, tip, setTip, setTotalOrder } = useOrder();
+  const { order, addItem, removeItem, tip, setTip } = useOrder();
 
   return (
     <>
@@ -29,7 +29,7 @@ function App() {
             <>
               <OrderContents order={order} removeItem={removeItem} />
               <TipPrecentageForm tip={tip} setTip={setTip} />
-              <OrderTotals order={order} tip={tip} setTotalOrder={setTotalOrder} />
+              <OrderTotals order={order} tip={tip} />
             </>
           ) : (
             <p className="text-center">La order esta vacia</p>

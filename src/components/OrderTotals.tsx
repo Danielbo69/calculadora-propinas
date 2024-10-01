@@ -1,11 +1,11 @@
 import { useMemo } from "react";
-import { OrderItem, TotalOrder } from "../types";
+import { OrderItem } from "../types";
 import { formatCurrency } from "../helpers";
 
 type OrderTotalsProps = {
   order: OrderItem[];
   tip: number;
-  setTotalOrder: React.Dispatch<React.SetStateAction<TotalOrder[]>>;
+  // setTotalOrder: React.Dispatch<React.SetStateAction<TotalOrder[]>>;
 };
 
 function OrderTotals({ order, tip } : OrderTotalsProps) {

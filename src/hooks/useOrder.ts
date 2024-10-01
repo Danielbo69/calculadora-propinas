@@ -37,10 +37,10 @@ export default function useOder() {
   return {
     order,
     tip,
-    totalOrder,
+    // totalOrder,
     setTip,
     addItem,
     removeItem,
-    setTotalOrder,
+    // setTotalOrder,
   };
 }
