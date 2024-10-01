@@ -8,17 +8,17 @@ type OrderTotalsProps = {
   setTotalOrder: React.Dispatch<React.SetStateAction<TotalOrder[]>>;
 };
 
-function OrderTotals({ order, tip, setTotalOrder } : OrderTotalsProps) {
+function OrderTotals({ order, tip } : OrderTotalsProps) {
   const subtotalAmount = useMemo(
     () => order.reduce((total, item) => total + item.quantity * item.price, 0),
     [order]
   );
   const tipAmount = useMemo(() => subtotalAmount * tip, [tip, order]);
   const totalAmount = useMemo(() => subtotalAmount + tipAmount, [tip, order]);
-  const orderTotal = {
-    ...order,
-    total: totalAmount
-  }
+  // const orderTotal = {
+  //   ...order,
+  //   total: totalAmount
+  // }
 
   return (
     <>

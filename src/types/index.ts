@@ -8,6 +8,6 @@ export type OrderItem =  MenuItem & {
   quantity: number;
 }
 
-export type TotalOrder = MenuItem & {
-  total: number;
-}
+// export type TotalOrder = MenuItem & {
+//   total: number;
+// }

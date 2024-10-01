@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import type { MenuItem, OrderItem, TotalOrder } from "../types";
+import { useState } from "react";
+import type { MenuItem, OrderItem } from "../types";
 
 export default function useOder() {
   const [order, setOrder] = useState<OrderItem[]>([]);
   const [tip, setTip] = useState(0);
-  const [totalOrder, setTotalOrder] = useState<TotalOrder[]>([]);
+  // const [totalOrder, setTotalOrder] = useState<TotalOrder[]>([]);
   
-  useEffect(() => {
-    if (totalOrder) {
-      setOrder([]);
-      setTip(0);
-    }
-  }, [totalOrder]);
+  // useEffect(() => {
+  //   if (totalOrder) {
+  //     setOrder([]);
+  //     setTip(0);
+  //   }
+  // }, [totalOrder]);
   
 
   const addItem = (item: MenuItem) => {
