@@ -42,7 +42,7 @@ function OrderTotals({ order, tip, setTotalOrder } : OrderTotalsProps) {
       <button
         className="w-full bg-black p-3 uppercase text-white font-bold mt-10 disabled:opacity-10 hover:opacity-90"
         disabled={totalAmount === 0}
-        onClick={() => setTotalOrder(orderTotal)}
+        onClick={() => console.log('Orden Guardada')}
       >
         Guardar Orden
       </button>
